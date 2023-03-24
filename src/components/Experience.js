@@ -12,6 +12,7 @@ export default class Experience extends Component {
 
     componentDidMount() {
         this.getAllWork()
+        document.title = 'Experience'
     }
 
     getAllWork(){
@@ -26,22 +27,24 @@ export default class Experience extends Component {
         })
     }
 
-  
   render() {
     return (
-        <div className='App-header'>
-            {this.state.work.map((result, index) => (
-              <Card className='color-text mb-3' style={{ width: '14rem'}}>
-                  <Card.Img variant="top" src="./logo192.png" />
-                  <Card.Body>
-                  <Card.Title>{result.name}</Card.Title>
-                  <Card.Text>
-                      {result.description}
-                  </Card.Text>
-                  <Button className='text-center d-grid gap-2' href={result.github_url} variant="primary">Github</Button>
-                  </Card.Body>
-              </Card>
-            ))}
+        <div className='slide-in-buttom'>
+            <h1 className='text-center'>Experience</h1>
+            <div className='d-flex'>
+                {this.state.work.map((result, index) => (
+                    <Card className='color-text m-2' style={{ width: '14rem'}}>
+                        <Card.Img variant="top" src="./img/experience.jpg" />
+                        <Card.Body>
+                        <Card.Title>{result.name}</Card.Title>
+                        <Card.Text>
+                            {result.description}
+                        </Card.Text>
+                        <Button className='text-center d-grid gap-2' href={result.github_url} target="_blank" rel="noopener" variant="primary">Github</Button>
+                        </Card.Body>
+                    </Card>
+                ))}
+            </div>
         </div>
     )
   }

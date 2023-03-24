@@ -3,19 +3,18 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 export default class MenuBar extends Component {
-  render() {
+    render() {
     return (
-      <>
-        <Navbar className='bg-light shadow-sm mb-3' sticky='top' expand='lg'>
+        <Navbar className='bg-red shadow-sm mb-3' sticky='top' expand='lg'>
             <Container fluid>
                 <Navbar.Brand href='/'>
-                    <img src='./logo192.png' alt='' className='App-logo img-fluid' />
-                    {' '} 
+                    <img src='/img/nyancat.gif' width='100' height='50' alt='..' className='App-logo image-fluid'/>
+                    {' '} My portfolio
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-menubar'/>
                 <Navbar.Collapse id='basic-menubar'>
                     <Nav className='ms-auto'>
-                        <ul className='navbar-nav mr-auto'>
+                        <ul className='navbar-nav mr-auto '>
                             <li className='nav-item'>
                                 <NavLink to='/' className='nav-link'>Home</NavLink>
                             </li>
@@ -28,12 +27,14 @@ export default class MenuBar extends Component {
                             <li className='nav-item'>
                                 <NavLink to='/contact' className='nav-link'>Contact</NavLink>
                             </li>
+                            <li className='nav-item'>
+                                <NavLink to='/admin' className='nav-link'>Admin</NavLink>
+                            </li>
                         </ul>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-      </>
     )
   }
 }
