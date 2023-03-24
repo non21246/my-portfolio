@@ -24,6 +24,6 @@ Edit Experience
 
 ### Getting started
 1.Clone or fork project.
-2.Install required dependencies with ### `npm install`### .
+2.Install required dependencies with `npm install` .
 3.Open VsCode with this folder
-4.### `npm start` ### project and customize it.
+4. `npm start`  project and customize it.
