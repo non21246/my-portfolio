@@ -22,3 +22,8 @@ Experience List
 Edit Experience
 <img src='/public/img/24.03.2023.11.png'>
 
+### Getting started
+1.Clone or fork project.
+2.Install required dependencies with ### `npm install`### .
+3.Open VsCode with this folder
+4.### `npm start` ### project and customize it.
